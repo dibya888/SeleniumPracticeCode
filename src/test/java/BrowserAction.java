@@ -13,12 +13,12 @@ public class BrowserAction {
     @Test
     public void firstTest(){
         driver = new EdgeDriver();
+        maximize();
         driver.get("https://google.com");
         navigation("https://linkedin.com");
 //        navigateBack();
 //        navigateForward();
 //        refresh();
-        maximize();
 //        minimize();
 //        setPosition();
 //        setDimension();
@@ -29,7 +29,9 @@ public class BrowserAction {
 //        getWindowHandle();
         driver.switchTo().newWindow(WindowType.TAB);
 //        getWindowHandle();
-        getWindowHandles();
+//        getWindowHandles();
+//        close();
+        quit();
     }
 
     public void navigation(String url){
@@ -80,8 +82,14 @@ public class BrowserAction {
 //        String windowHandle = driver.getWindowHandle();
 //        System.out.println("The Window Handle is: "+windowHandle);
 //    }
-    public void getWindowHandles(){
-        Set<String> windowHandles = driver.getWindowHandles();
-        System.out.println("The window Handle IDs are: "+windowHandles);
+//    public void getWindowHandles(){
+//        Set<String> windowHandles = driver.getWindowHandles();
+//        System.out.println("The window Handle IDs are: "+windowHandles);
+//    }
+//    public void close(){
+//        driver.close();
+//    }
+    public void quit(){
+        driver.quit();
     }
 }
