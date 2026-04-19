@@ -5,6 +5,8 @@ import org.openqa.selenium.WindowType;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
+import java.util.Set;
+
 public class BrowserAction {
     WebDriver driver;
 
@@ -24,9 +26,10 @@ public class BrowserAction {
 //        getCurrentURL();
 //        getPageTitle();
 //        getPageSource();
-        getWindowHandle();
+//        getWindowHandle();
         driver.switchTo().newWindow(WindowType.TAB);
-        getWindowHandle();
+//        getWindowHandle();
+        getWindowHandles();
     }
 
     public void navigation(String url){
@@ -73,8 +76,12 @@ public class BrowserAction {
 //        String pageSource = driver.getPageSource();
 //        System.out.println("Current Page's Source Code is: "+pageSource);
 //    }
-    public void getWindowHandle(){
-        String windowHandle = driver.getWindowHandle();
-        System.out.println("The Window Handle is: "+windowHandle);
+//    public void getWindowHandle(){
+//        String windowHandle = driver.getWindowHandle();
+//        System.out.println("The Window Handle is: "+windowHandle);
+//    }
+    public void getWindowHandles(){
+        Set<String> windowHandles = driver.getWindowHandles();
+        System.out.println("The window Handle IDs are: "+windowHandles);
     }
 }
