@@ -17,37 +17,41 @@ public class BrowserAction {
 //        refresh();
 //        maximize();
 //        minimize();
-        setPosition();
-        setDimension();
+//        setPosition();
+//        setDimension();
+        fullscreen();
     }
 
     public void navigation(String url){
         driver.navigate().to(url);
     }
-
-    public void navigateBack(){
-        driver.navigate().back();
-    }
-
-    public void navigateForward(){
-        driver.navigate().forward();
-    }
-
-    public void refresh(){
-        driver.navigate().refresh();
-    }
-
-    public void maximize(){
-        driver.manage().window().maximize();
-    }
-    public void minimize(){
-        driver.manage().window().minimize();
-    }
-    public void setPosition(){
-        driver.manage().window().setPosition(new Point(100,100));
-    }
-    public void setDimension(){
-        Dimension dimension = new Dimension(412,915);
-        driver.manage().window().setSize(dimension);
+//
+//    public void navigateBack(){
+//        driver.navigate().back();
+//    }
+//
+//    public void navigateForward(){
+//        driver.navigate().forward();
+//    }
+//
+//    public void refresh(){
+//        driver.navigate().refresh();
+//    }
+//
+//    public void maximize(){
+//        driver.manage().window().maximize();
+//    }
+//    public void minimize(){
+//        driver.manage().window().minimize();
+//    }
+//    public void setPosition(){
+//        driver.manage().window().setPosition(new Point(100,100));
+//    }
+//    public void setDimension(){
+//        Dimension dimension = new Dimension(412,915);
+//        driver.manage().window().setSize(dimension);
+//    }
+    public void fullscreen(){
+        driver.manage().window().fullscreen();
     }
 }
