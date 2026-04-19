@@ -1,3 +1,4 @@
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,6 +18,7 @@ public class BrowserAction {
 //        maximize();
 //        minimize();
         setPosition();
+        setDimension();
     }
 
     public void navigation(String url){
@@ -43,5 +45,9 @@ public class BrowserAction {
     }
     public void setPosition(){
         driver.manage().window().setPosition(new Point(100,100));
+    }
+    public void setDimension(){
+        Dimension dimension = new Dimension(412,915);
+        driver.manage().window().setSize(dimension);
     }
 }
