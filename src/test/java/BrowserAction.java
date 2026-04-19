@@ -15,14 +15,15 @@ public class BrowserAction {
 //        navigateBack();
 //        navigateForward();
 //        refresh();
-//        maximize();
+        maximize();
 //        minimize();
 //        setPosition();
 //        setDimension();
 //        fullscreen();
-        getCurrentURL();
-        getPageTitle();
-        getPageSource();
+//        getCurrentURL();
+//        getPageTitle();
+//        getPageSource();
+        getWindowHandle();
     }
 
     public void navigation(String url){
@@ -41,9 +42,9 @@ public class BrowserAction {
 //        driver.navigate().refresh();
 //    }
 //
-//    public void maximize(){
-//        driver.manage().window().maximize();
-//    }
+    public void maximize(){
+        driver.manage().window().maximize();
+    }
 //    public void minimize(){
 //        driver.manage().window().minimize();
 //    }
@@ -57,16 +58,20 @@ public class BrowserAction {
 //    public void fullscreen(){
 //        driver.manage().window().fullscreen();
 //    }
-    public void getCurrentURL(){
-        String URL = driver.getCurrentUrl();
-        System.out.println("Current Site is: "+URL);
-    }
-    public void getPageTitle(){
-        String title = driver.getTitle();
-        System.out.println("Current Site's Title is: "+title);
-    }
-    public void getPageSource(){
-        String pageSource = driver.getPageSource();
-        System.out.println("Current Page's Source Code is: "+pageSource);
+//    public void getCurrentURL(){
+//        String URL = driver.getCurrentUrl();
+//        System.out.println("Current Site is: "+URL);
+//    }
+//    public void getPageTitle(){
+//        String title = driver.getTitle();
+//        System.out.println("Current Site's Title is: "+title);
+//    }
+//    public void getPageSource(){
+//        String pageSource = driver.getPageSource();
+//        System.out.println("Current Page's Source Code is: "+pageSource);
+//    }
+    public void getWindowHandle(){
+        String windowHandle = driver.getWindowHandle();
+        System.out.println("The Window Handle is: "+windowHandle);
     }
 }
