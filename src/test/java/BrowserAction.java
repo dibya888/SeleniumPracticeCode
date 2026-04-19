@@ -19,7 +19,10 @@ public class BrowserAction {
 //        minimize();
 //        setPosition();
 //        setDimension();
-        fullscreen();
+//        fullscreen();
+        getCurrentURL();
+        getPageTitle();
+        getPageSource();
     }
 
     public void navigation(String url){
@@ -51,7 +54,19 @@ public class BrowserAction {
 //        Dimension dimension = new Dimension(412,915);
 //        driver.manage().window().setSize(dimension);
 //    }
-    public void fullscreen(){
-        driver.manage().window().fullscreen();
+//    public void fullscreen(){
+//        driver.manage().window().fullscreen();
+//    }
+    public void getCurrentURL(){
+        String URL = driver.getCurrentUrl();
+        System.out.println("Current Site is: "+URL);
+    }
+    public void getPageTitle(){
+        String title = driver.getTitle();
+        System.out.println("Current Site's Title is: "+title);
+    }
+    public void getPageSource(){
+        String pageSource = driver.getPageSource();
+        System.out.println("Current Page's Source Code is: "+pageSource);
     }
 }
