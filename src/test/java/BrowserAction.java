@@ -1,3 +1,4 @@
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
@@ -10,9 +11,12 @@ public class BrowserAction {
         driver = new EdgeDriver();
         driver.get("https://google.com");
         navigation("https://linkedin.com");
-        navigateBack();
-        navigateForward();
-        refresh();
+//        navigateBack();
+//        navigateForward();
+//        refresh();
+//        maximize();
+//        minimize();
+        setPosition();
     }
 
     public void navigation(String url){
@@ -33,5 +37,11 @@ public class BrowserAction {
 
     public void maximize(){
         driver.manage().window().maximize();
+    }
+    public void minimize(){
+        driver.manage().window().minimize();
+    }
+    public void setPosition(){
+        driver.manage().window().setPosition(new Point(100,100));
     }
 }
