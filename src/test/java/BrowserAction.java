@@ -1,6 +1,7 @@
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
@@ -23,6 +24,8 @@ public class BrowserAction {
 //        getCurrentURL();
 //        getPageTitle();
 //        getPageSource();
+        getWindowHandle();
+        driver.switchTo().newWindow(WindowType.TAB);
         getWindowHandle();
     }
 
