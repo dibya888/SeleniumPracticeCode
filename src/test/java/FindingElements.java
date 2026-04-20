@@ -1,7 +1,10 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+
+import java.util.List;
 
 public class FindingElements {
     static void main(String[] args) throws InterruptedException {
@@ -10,18 +13,25 @@ public class FindingElements {
         driver.manage().window().maximize();
 
         driver.get("https://the-internet.herokuapp.com");
-        driver.findElement(By.partialLinkText("JavaScript onload")).click();
-        Thread.sleep(1000);
-        driver.navigate().back();
-        driver.findElement(By.linkText("Form Authentication")).click();
-        driver.findElement(By.id("username")).sendKeys("tomsmith");
+//        driver.findElement(By.partialLinkText("JavaScript onload")).click();
+//        Thread.sleep(1000);
+//        driver.navigate().back();
+//        driver.findElement(By.linkText("Form Authentication")).click();
+//        driver.findElement(By.id("username")).sendKeys("tomsmith");
 //        driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
 //        driver.findElement(By.name("username")).sendKeys("tomsmith");
-        driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
-        driver.findElement(By.tagName("button")).click();
-        driver.findElement(By.className("radius")).click();
-
-
+//        driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
+//        driver.findElement(By.tagName("button")).click();
+//        driver.findElement(By.className("radius")).click();
+        driver.findElement(By.linkText("Sortable Data Tables")).click();
+        WebElement table = driver.findElement(By.id("table1"));             //Select Table and put it in a variable.
+        List<WebElement> tableRows = table.findElements(By.tagName("tr"));  //Select all the data which has tagName 'tr'
+        System.out.println("Total Row: "+tableRows.size());                 //Print how many data/row are there.
+        System.out.println("Headers are: "+tableRows.get(0).getText());     //Print what's written in Header.
+        System.out.println("Headers are: "+tableRows.get(1).getText());
+        System.out.println("Headers are: "+tableRows.get(2).getText());
+        System.out.println("Headers are: "+tableRows.get(3).getText());
+        System.out.println("Headers are: "+tableRows.get(4).getText());
 
         Thread.sleep(2000);
         driver.quit();
