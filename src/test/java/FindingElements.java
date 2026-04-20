@@ -9,12 +9,16 @@ public class FindingElements {
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
 
-        driver.get("https://the-internet.herokuapp.com/login");
-//        driver.findElement(By.id("username")).sendKeys("tomsmith");
+        driver.get("https://the-internet.herokuapp.com");
+        driver.findElement(By.partialLinkText("JavaScript onload")).click();
+        Thread.sleep(1000);
+        driver.navigate().back();
+        driver.findElement(By.linkText("Form Authentication")).click();
+        driver.findElement(By.id("username")).sendKeys("tomsmith");
 //        driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
-        driver.findElement(By.name("username")).sendKeys("tomsmith");
+//        driver.findElement(By.name("username")).sendKeys("tomsmith");
         driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
-        driver.findElement(By.className("radius")).click();
+        driver.findElement(By.tagName("button")).click();
         driver.findElement(By.className("radius")).click();
 
 
