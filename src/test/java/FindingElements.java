@@ -23,15 +23,20 @@ public class FindingElements {
 //        driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
 //        driver.findElement(By.tagName("button")).click();
 //        driver.findElement(By.className("radius")).click();
-        driver.findElement(By.linkText("Sortable Data Tables")).click();
-        WebElement table = driver.findElement(By.id("table1"));             //Select Table and put it in a variable.
-        List<WebElement> tableRows = table.findElements(By.tagName("tr"));  //Select all the data which has tagName 'tr'
-        System.out.println("Total Row: "+tableRows.size());                 //Print how many data/row are there.
-        System.out.println("Headers are: "+tableRows.get(0).getText());     //Print what's written in Header.
-        System.out.println("Headers are: "+tableRows.get(1).getText());
-        System.out.println("Headers are: "+tableRows.get(2).getText());
-        System.out.println("Headers are: "+tableRows.get(3).getText());
-        System.out.println("Headers are: "+tableRows.get(4).getText());
+//        driver.findElement(By.linkText("Sortable Data Tables")).click();
+//        WebElement table = driver.findElement(By.id("table1"));             //Select Table and put it in a variable.
+//        List<WebElement> tableRows = table.findElements(By.tagName("tr"));  //Select all the data which has tagName 'tr'
+//        System.out.println("Total Row: "+tableRows.size());                 //Print how many data/row are there.
+//        System.out.println("Headers are: "+tableRows.get(0).getText());     //Print what's written in Header.
+//        System.out.println("Headers are: "+tableRows.get(1).getText());
+//        System.out.println("Headers are: "+tableRows.get(2).getText());
+//        System.out.println("Headers are: "+tableRows.get(3).getText());
+//        System.out.println("Headers are: "+tableRows.get(4).getText());
+        driver.findElement(By.xpath("//a[@href='/login']")).click();
+        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("tomsmith");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("SuperSecretPassword!");
+        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/form/button")).click();
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div/a")).click(); //Copied xpath from browser
 
         Thread.sleep(2000);
         driver.quit();
