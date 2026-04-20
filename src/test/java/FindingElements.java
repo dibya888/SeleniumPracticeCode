@@ -16,7 +16,7 @@ public class FindingElements {
 //        driver.findElement(By.partialLinkText("JavaScript onload")).click();
 //        Thread.sleep(1000);
 //        driver.navigate().back();
-//        driver.findElement(By.linkText("Form Authentication")).click();
+        driver.findElement(By.linkText("Form Authentication")).click();
 //        driver.findElement(By.id("username")).sendKeys("tomsmith");
 //        driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
 //        driver.findElement(By.name("username")).sendKeys("tomsmith");
@@ -32,11 +32,14 @@ public class FindingElements {
 //        System.out.println("Headers are: "+tableRows.get(2).getText());
 //        System.out.println("Headers are: "+tableRows.get(3).getText());
 //        System.out.println("Headers are: "+tableRows.get(4).getText());
-        driver.findElement(By.xpath("//a[@href='/login']")).click();
-        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("tomsmith");
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("SuperSecretPassword!");
-        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/form/button")).click();
-        driver.findElement(By.xpath("//*[@id=\"content\"]/div/a")).click(); //Copied xpath from browser
+//        driver.findElement(By.xpath("//a[@href='/login']")).click();
+//        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("tomsmith");
+//        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("SuperSecretPassword!");
+//        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/form/button")).click();
+//        driver.findElement(By.xpath("//*[@id=\"content\"]/div/a")).click(); //Copied xpath from browser
+        driver.findElement(By.cssSelector("input#username")).sendKeys("tomsmith");
+        driver.findElement(By.cssSelector("input#password")).sendKeys("SuperSecretPassword!");
+        driver.findElement(By.cssSelector("button.radius")).click();
 
         Thread.sleep(2000);
         driver.quit();
