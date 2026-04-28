@@ -74,10 +74,10 @@ public class FindingElementTestNG {
         List<WebElement> tableRows = table.findElements(By.tagName("tr"));
         System.out.println("Total Row: "+tableRows.size());
         System.out.println("Headers are: "+tableRows.get(0).getText());
-        System.out.println("Content of 1st Rows are: "+tableRows.get(1).getText());
-        System.out.println("Content of 2nd Rows are: "+tableRows.get(2).getText());
-        System.out.println("Content of 3rd Rows are: "+tableRows.get(3).getText());
-        System.out.println("Content of 4th Rows are: "+tableRows.get(4).getText());
+        System.out.println("Contents of 1st Rows are: "+tableRows.get(1).getText());
+        System.out.println("Contents of 2nd Rows are: "+tableRows.get(2).getText());
+        System.out.println("Contents of 3rd Rows are: "+tableRows.get(3).getText());
+        System.out.println("Contents of 4th Rows are: "+tableRows.get(4).getText());
     }
 
     public void pause() throws InterruptedException {
