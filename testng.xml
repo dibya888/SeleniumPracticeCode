@@ -7,16 +7,23 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="GroupingTest">
-        <groups>
-            <run>
-                <include name="sanity"/>
-                <include name="regression"/>
-                <exclude name="unit"/>
-            </run>
-        </groups>
+<!--    <test name="GroupingTest">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="sanity"/>-->
+<!--                <include name="regression"/>-->
+<!--                <exclude name="unit"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="GroupingExample"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="Assertions">
         <classes>
-            <class name="GroupingExample"/>
+            <class name="AssertionsExample">
+
+            </class>
         </classes>
     </test>
 </suite>
