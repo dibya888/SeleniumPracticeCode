@@ -42,7 +42,7 @@
             <class name="ParametersExample"/>
         </classes>
     </test>
-    
+
     <test name="parametersTest3">
         <parameter name="browser" value="edge"/>
         <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
