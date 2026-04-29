@@ -7,15 +7,16 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="Regression1">
+    <test name="GroupingTest">
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <include name="regression"/>
+                <exclude name="unit"/>
+            </run>
+        </groups>
         <classes>
-            <class name="TC1">
-                <methods>
-                    <include name="test1"/>
-                    <exclude name="test2"/>
-                </methods>
-            </class>
-            <class name="TC2"/>
+            <class name="GroupingExample"/>
         </classes>
     </test>
 </suite>
