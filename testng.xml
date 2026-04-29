@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1">
+<suite name="Suite1" parallel="tests" thread-count="2" verbose="1">
     <!--    <test name="Nopackage" >-->
     <!--        <classes>-->
     <!--            <class name="NoPackageTest" />-->
@@ -27,27 +27,37 @@
     <!--        </classes>-->
     <!--    </test>-->
 
-    <test name="parametersTest1">
-        <parameter name="browser" value="firefox"/>
-        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+<!--    <test name="parametersTest1">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+<!--        <classes>-->
+<!--            <class name="ParametersExample"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="parametersTest2">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+<!--        <classes>-->
+<!--            <class name="ParametersExample"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="parametersTest3">-->
+<!--        <parameter name="browser" value="edge"/>-->
+<!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+<!--        <classes>-->
+<!--            <class name="ParametersExample"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="test1">
         <classes>
-            <class name="ParametersExample"/>
+            <class name="parallelTesting.ParallelTest1"/>
         </classes>
     </test>
-
-    <test name="parametersTest2">
-        <parameter name="browser" value="chrome"/>
-        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+    <test name="test2">
         <classes>
-            <class name="ParametersExample"/>
-        </classes>
-    </test>
-
-    <test name="parametersTest3">
-        <parameter name="browser" value="edge"/>
-        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
-        <classes>
-            <class name="ParametersExample"/>
+            <class name="parallelTesting.ParallelTest2"/>
         </classes>
     </test>
 </suite>

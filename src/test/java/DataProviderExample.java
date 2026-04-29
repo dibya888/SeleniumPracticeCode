@@ -7,5 +7,4 @@ public class DataProviderExample {
     public void loginTest(String email, String pwd) {
         System.out.println(email+"  "+pwd);
     }
-    
 }
