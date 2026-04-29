@@ -27,37 +27,47 @@
     <!--        </classes>-->
     <!--    </test>-->
 
-<!--    <test name="parametersTest1">-->
-<!--        <parameter name="browser" value="firefox"/>-->
-<!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
-<!--        <classes>-->
-<!--            <class name="ParametersExample"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    <test name="parametersTest1">-->
+    <!--        <parameter name="browser" value="firefox"/>-->
+    <!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+    <!--        <classes>-->
+    <!--            <class name="ParametersExample"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test name="parametersTest2">-->
-<!--        <parameter name="browser" value="chrome"/>-->
-<!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
-<!--        <classes>-->
-<!--            <class name="ParametersExample"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <!--    <test name="parametersTest2">-->
+    <!--        <parameter name="browser" value="chrome"/>-->
+    <!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+    <!--        <classes>-->
+    <!--            <class name="ParametersExample"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test name="parametersTest3">-->
-<!--        <parameter name="browser" value="edge"/>-->
-<!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
-<!--        <classes>-->
-<!--            <class name="ParametersExample"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-    <test name="test1">
+    <!--    <test name="parametersTest3">-->
+    <!--        <parameter name="browser" value="edge"/>-->
+    <!--        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+    <!--        <classes>-->
+    <!--            <class name="ParametersExample"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="test1">-->
+    <!--        <classes>-->
+    <!--            <class name="parallelTesting.ParallelTest1"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="test2">-->
+    <!--        <classes>-->
+    <!--            <class name="parallelTesting.ParallelTest2"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <listeners>
+        <listener class-name="listeners.CustomListener">
+        </listener>
+    </listeners>
+    <test name="listener">
         <classes>
-            <class name="parallelTesting.ParallelTest1"/>
-        </classes>
-    </test>
-    <test name="test2">
-        <classes>
-            <class name="parallelTesting.ParallelTest2"/>
+            <class name="listeners.ListenerTest">
+            </class>
         </classes>
     </test>
 </suite>
