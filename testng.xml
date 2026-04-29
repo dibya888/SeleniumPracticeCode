@@ -1,29 +1,53 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
-<!--    <test name="Nopackage" >-->
-<!--        <classes>-->
-<!--            <class name="NoPackageTest" />-->
-<!--        </classes>-->
-<!--    </test>-->
+<suite name="Suite1" verbose="1">
+    <!--    <test name="Nopackage" >-->
+    <!--        <classes>-->
+    <!--            <class name="NoPackageTest" />-->
+    <!--        </classes>-->
+    <!--    </test>-->
 
-<!--    <test name="GroupingTest">-->
-<!--        <groups>-->
-<!--            <run>-->
-<!--                <include name="sanity"/>-->
-<!--                <include name="regression"/>-->
-<!--                <exclude name="unit"/>-->
-<!--            </run>-->
-<!--        </groups>-->
-<!--        <classes>-->
-<!--            <class name="GroupingExample"/>-->
-<!--        </classes>-->
-<!--    </test>-->
-    <test name="Assertions">
+    <!--    <test name="GroupingTest">-->
+    <!--        <groups>-->
+    <!--            <run>-->
+    <!--                <include name="sanity"/>-->
+    <!--                <include name="regression"/>-->
+    <!--                <exclude name="unit"/>-->
+    <!--            </run>-->
+    <!--        </groups>-->
+    <!--        <classes>-->
+    <!--            <class name="GroupingExample"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="Assertions">-->
+    <!--        <classes>-->
+    <!--            <class name="AssertionsExample">-->
+
+    <!--            </class>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <test name="parametersTest1">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
         <classes>
-            <class name="AssertionsExample">
+            <class name="ParametersExample"/>
+        </classes>
+    </test>
 
-            </class>
+    <test name="parametersTest2">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+        <classes>
+            <class name="ParametersExample"/>
+        </classes>
+    </test>
+    
+    <test name="parametersTest3">
+        <parameter name="browser" value="edge"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+        <classes>
+            <class name="ParametersExample"/>
         </classes>
     </test>
 </suite>
